@@ -1,0 +1,18 @@
+@mixin breakpoint ($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin underline ($height, $bg, $time) {
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: $height;
+    background-color: $bg;
+    transition: $time ease-in-out;
+  }
+}

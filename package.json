@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "browser-sync": "^2.27.10",
+    "cssnano": "^5.1.13",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-scss": "^1.4.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.54.7",
+    "scss": "^0.2.4"
+  },
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio page",
+  "main": "gulpfile.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bartosz Rybiński",
+  "license": "ISC"
+}

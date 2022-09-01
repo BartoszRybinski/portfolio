@@ -1,0 +1,10 @@
+h1 {
+  font: {
+    size: 2.5rem!important;
+    weight: 700;
+  }
+  color: $color-title;
+  @include breakpoint($large) {
+    font-size: 1.5rem;
+  }
+}
