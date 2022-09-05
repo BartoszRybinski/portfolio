@@ -1,0 +1,37 @@
+.education {
+  margin-top: 1.875rem;
+  @include breakpoint ($large) {
+    margin-top: 6.25rem;
+  }
+
+  &-title {
+    text-align: center;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint ($large) {
+      flex-direction: row;
+    }
+  }
+
+  &-wrapper {
+    margin-top: 40px;
+
+    &-name, &-date {
+      display: block;
+    }
+
+    &-date {
+      margin-top: 0.1875rem;
+    }
+  }
+
+  &-img {
+    display: none;
+    @include breakpoint ($large) {
+      display: block;
+    }
+  }
+}

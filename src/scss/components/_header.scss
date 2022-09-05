@@ -1,33 +1,50 @@
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-top: 2.5rem;
   font-weight: bold;
-  &-nav {
-    &-logo {
-      position: relative;
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-menu {
+      display: flex;
+      align-items: center;
+      width: 1.75rem;
+      height: 1.625rem;
       cursor: pointer;
-      color: $color-black;
-      @include underline(0.125rem, $color-primary, 0.2s);
       &:hover {
-        color: $color-primary;
-        transition: 0.2s ease-in-out;
-        &::after {
-          width: 100%;
+        .header-wrapper-menu-hamburger {
+          width: 1.75rem;
+          transition: 0.3s ease-in-out;
         }
       }
-    }
-    &-list {
-      display: none;
-      @include breakpoint($large) {
-        display: flex;
-        gap: 2.5rem;
-        margin-bottom: 0;
-      }
-      &-item {
+      &-hamburger {
+        width: 1.25rem;
+        height: 0.125rem;
+        background-color: $color-primary;
         position: relative;
-        list-style: none;
+        &::before, &::after {
+          content: '';
+          position: absolute;
+          width: 1.75rem;
+          height: 0.125rem;
+          background-color: $color-primary;
+        }
+        &::before {
+          top: 0.625rem;
+          left: 0;
+        }
+        &::after {
+          top: -0.625rem;
+          left: 0;
+        }
+      }
+      @include breakpoint($large) {
+        display: none;
+      }
+    }
+    &-nav {
+      &-logo {
+        position: relative;
         cursor: pointer;
         color: $color-black;
         @include underline(0.125rem, $color-primary, 0.2s);
@@ -36,6 +53,28 @@
           transition: 0.2s ease-in-out;
           &::after {
             width: 100%;
+          }
+        }
+      }
+      &-list {
+        display: none;
+        @include breakpoint($large) {
+          display: flex;
+          gap: 2.5rem;
+          margin-bottom: 0;
+        }
+        &-item {
+          position: relative;
+          list-style: none;
+          cursor: pointer;
+          color: $color-black;
+          @include underline(0.125rem, $color-primary, 0.2s);
+          &:hover {
+            color: $color-primary;
+            transition: 0.2s ease-in-out;
+            &::after {
+              width: 100%;
+            }
           }
         }
       }

@@ -5,6 +5,39 @@ h1 {
   }
   color: $color-title;
   @include breakpoint($large) {
+    font-size: 1.75rem;
+  }
+}
+
+h2 {
+  font: {
+    size: 2rem!important;
+    weight: 700;
+  }
+  color: $color-title;
+  @include breakpoint($large) {
     font-size: 1.5rem;
+  }
+}
+
+h3 {
+  font: {
+    size: 1.5rem!important;
+    weight: 300;
+  }
+  color: $color-title-secondary;
+  @include breakpoint($large) {
+    font-size: 1.25rem;
+  }
+}
+
+h4 {
+  font: {
+    size: 1.5rem!important;
+    weight: 700;
+  }
+  color: $color-title;
+  @include breakpoint($large) {
+    font-size: 1.25rem;
   }
 }

@@ -1,12 +1,22 @@
-.btn-primary {
-  padding: 0.8375rem 1.725rem;
-  background-color: $color-primary;
-  color: $color-btn;
-  border-radius: 0.625rem;
-  transition: 0.2s ease-in-out;
-  &:hover {
-    background-color: $color-btn-hover;
+.btn-wrapper {
+  margin-top: 1.75rem;
+  display: flex;
+  justify-content: center;
+  column-gap: 1.25rem;
+  @include breakpoint ($medium) {
+    justify-content: start;
+  }
+
+  &-primary {
+    padding: 0.5375rem 1.5rem;
+    background-color: $color-primary;
     color: $color-btn;
+    border-radius: 0.5rem;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      background-color: $color-btn-hover;
+      color: $color-btn;
+    }
   }
 }
 
@@ -16,10 +26,16 @@
   justify-content: center;
   gap: 0.625rem;
   margin-top: 1.25rem;
+  width: 80%;
+  @include breakpoint ($medium) {
+    width: 100%;
+  }
 }
 
+
+
 .btn-badge {
-  padding: 0.4375rem 1rem;
+  padding: 0.3rem 0.9rem;
   border: 0.125rem solid $color-primary;
   border-radius: 0.375rem;
   color: $color-primary;

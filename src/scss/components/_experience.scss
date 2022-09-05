@@ -1,0 +1,46 @@
+.experience {
+  margin-top: 6.875rem;
+  @include breakpoint ($large) {
+    margin-top: 7.5rem;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint ($large) {
+      flex-direction: row;
+    }
+  }
+
+  &-wrapper {
+    &-title {
+      text-align: center;
+    }
+    &-job {
+      margin-top: 2.625rem;
+      @include breakpoint($large) {
+        margin-top: 3.75rem;
+      }
+    }
+    &-name, &-date {
+      display: block;
+    }
+
+    &-date {
+      margin-top: 0.1875rem;
+    }
+
+    &-list {
+      margin-top: 1rem;
+      font-weight: bold;
+      list-style: none;
+      font-size: 0.9rem;
+    }
+  }
+  &-img {
+    display: none;
+    @include breakpoint ($large) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.portfolio {
+  margin-top: 100px;
+  &-title {
+    text-align: center;
+  }
+  &-subtitle {
+    text-align: center;
+  }
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 40px;
+    @include breakpoint ($medium) {
+      flex-wrap: wrap;
+      flex-direction: row;
+      margin-top: 90px;
+    }
+    &-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include breakpoint ($medium) {
+        width: 40%;
+      }
+      @include breakpoint ($large) {
+        width: 30%;
+      }
+      &-img {
+        width: 80%;
+        @include breakpoint ($medium) {
+          width: 100%;
+        }
+      }
+      &-title {
+        margin-top: 18px;
+      }
+      &-description {
+        margin-top: 10px;
+        text-align: center;
+      }
+      &-btn {
+        margin-top: 25px;
+      }
+    }
+  }
+}

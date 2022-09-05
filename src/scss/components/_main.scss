@@ -1,41 +1,39 @@
 .main {
-  margin-top: 4.375rem;
-  display: flex;
-  flex-direction: column-reverse;
-  @include breakpoint ($medium) {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  &-wrapper {
+  &-section {
+    margin-top: 6.375rem;
+    display: flex;
+    flex-direction: column-reverse;
     @include breakpoint ($medium) {
-      width: 50%;
-    }
-    &-title {
-      text-align: center;
-      @include breakpoint ($medium) {
-        text-align: left;
-      }
-    }
-    &-text {
-      margin-top: 1.875rem;
-    }
-    &-btn {
-      margin-top: 1.75rem;
-      display: flex;
+      flex-direction: row;
+      align-items: center;
       justify-content: center;
-      column-gap: 1.25rem;
+    }
+    &-wrapper {
       @include breakpoint ($medium) {
-        justify-content: start;
+        width: 50%;
+      }
+      &-title {
+        text-align: center;
+        @include breakpoint ($medium) {
+          text-align: left;
+        }
+      }
+      &-text {
+        margin-top: 1.875rem;
+        font-size: 1.125rem;
+        @include breakpoint ($xlarge) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+    &-img {
+      margin-top: 2.5rem;
+      width: 100%;
+      @include breakpoint ($medium) {
+        width: 50%;
+        margin-top: 0;
       }
     }
   }
-  &-img {
-    margin-top: 2.5rem;
-    width: 100%;
-    @include breakpoint ($medium) {
-      width: 50%;
-      margin-top: 0;
-    }
-  }
+
 }
